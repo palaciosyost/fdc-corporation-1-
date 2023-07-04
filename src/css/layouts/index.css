@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+.logo img {
+  width: 100vw;
+  height: 200px;
+  margin-top: 150px;
+}
+@media screen and (min-width: 800px) {
+  .logo img {
+    margin-top: 80px;
+    height: 500px;
+  }
+}
