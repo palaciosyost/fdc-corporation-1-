@@ -1,0 +1,120 @@
+$color-footer: #272525;
+$color-enlaces: #bd0505;
+$color-primary: #3191c5;
+@mixin laptop {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+@mixin compu {
+  @media screen and (min-width: 1000px) {
+    @content;
+  }
+}
+.contenedor-foot {
+  background-color: $color-footer;
+  color: white;
+  .contenido-foot {
+    display: flex;
+    gap: 30px;
+    flex-flow: column nowrap;
+    padding: 50px 10px 10px 10px;
+    @include laptop {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: center;
+    }
+  }
+}
+
+.terminos {
+  .terminos-text {
+    display: flex;
+    gap: 20px;
+    flex-flow: column nowrap;
+    h4 {
+      font-weight: 800;
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    p {
+      color: $color-enlaces;
+      cursor: pointer;
+    }
+  }
+  .entradas {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    h6 {
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .contenido-entrada {
+      span {
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0.2;
+      }
+      p {
+        font-weight: 800;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.informacion {
+  h6 {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .enlace {
+    a {
+      text-decoration: none;
+      color: $color-enlaces;
+    }
+  }
+}
+.form-contacto {
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    label {
+      span {
+        color: $color-enlaces;
+      }
+    }
+    input {
+      border: none;
+      border-radius: 10px;
+      height: 35px;
+      padding-left: 10px;
+      outline: none;
+      @include laptop {
+        height: 30px;
+        border-radius: 5px;
+      }
+    }
+    select {
+      outline: none;
+      height: 30px;
+      padding-left: 10px;
+      border-radius: 4px;
+      
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 200px;
+      height: 40px;
+      border-radius: 6px;
+      background-color: $color-enlaces;
+      color: white;
+    }
+  }
+}
+
+
