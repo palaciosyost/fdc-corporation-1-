@@ -53,6 +53,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    gap: 20px;
     .icono {
       width: 70px;
       border: 2px solid $color-primary;
@@ -95,13 +96,128 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    &:hover{
+    &:hover {
       background-color: transparent;
-      border:1px solid rgb(47, 47, 241);
+      border: 1px solid rgb(47, 47, 241);
       color: rgb(57, 57, 232);
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       transform: scale(1.01);
     }
   }
 }
+.servicios-enlace {
+  background-color: #000000;
+  width: 100vw;
+  height: 120px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 15px;
+  @include laptop {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  @include tablet() {
+    justify-content: space-around;
+    align-items: center;
+  }
+  h3 {
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+    padding-top: 10px;
+    @include laptop {
+      font-size: 15px;
+    }
+  }
+  a {
+    transition: all 0.2s ease;
+    font-size: 14px;
+    width: 150px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    font-weight: bolder;
+    @include laptop {
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+    @include tablet() {
+      height: 37.5px;
+    }
+    &:hover {
+      transition: all 0.2s ease;
+      background-color: white;
+      color: #000000;
+    }
+  }
+}
+.seccion-index {
+  padding-top: 40px;
+}
+.seccion-info {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  @include laptop {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .texto-seccion-index {
+    width: 90%;
+    height: auto;
+    @include laptop {
+      width: 500px;
+    }
+    h3 {
+      font-size: 38px;
+      font-weight: 800;
+    }
+    p {
+      font-size: 16px;
+      text-align: justify;
+      margin-top: 20px;
+    }
+  }
+  .video-seccion-index {
+    width: 80%;
+    height: 300px;
+    @include laptop {
+      width: 500px;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+/* Anchura de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: rgb(199, 202, 199);
+}
+
+/* Color del pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: $color-primary;
+}
+
+/* Cambio de color del pulgar al pasar el ratón por encima */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(74, 116, 221);
+}

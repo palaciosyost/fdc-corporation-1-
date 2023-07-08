@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="src/css/nav.css">
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/footer.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -14,10 +15,12 @@
 </head>
 
 <body>
+    <!-- seccion de navegador -->
     <?php include('./src/vista/nav.php') ?>
     <div class="logo">
         <img src="./src/assets/img/logo.png" alt="">
     </div>
+    <!-- seccion de servicios -->
     <section class="servicios">
         <div class="contenedor">
             <div class="icono">
@@ -60,9 +63,52 @@
             </div>
         </div>
     </section>
+    <!-- seccion de servicios -->
     <div class="enlace-mas">
         <a href="#">Mas Servicios</a>
     </div>
+    <div class="servicios-enlace">
+        <h3>¿Quieres saber que productos distribuimos?</h3>
+        <a href="#">VER PRODUCTOS</a>
+    </div>
+    <section class="container">
+        <div class="seccion-index">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./src/assets/img/Aire-Comprimido-Flyer-768x256.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/assets/img/Estacionamiento-Flyer-768x256.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/assets/img/Equipos-para-taller-Flyer-768x255.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="seccion-info">
+            <div class="texto-seccion-index">
+                <h3>
+                    kärcher - fdc corp
+                </h3>
+                <p>
+                    Los equipos de limpieza de Kärcher aúnan funcionalidad, facilidad de uso y una estética exigente. La empresa se caracteriza por la innovación y el afán de conseguir la mejor solución, que siempre son galardonados con patentes y reconocimientos de instituciones de renombre. Más de 1300 patentes y modelos registrados confirman el espíritu ingenioso y la potencia innovadora de la empresa.
+                </p>
+            </div>
+            <div class="video-seccion-index">
+                <video src="./src/assets/video/FDC-Karcher-Comparación-Hidrolavadoras.mp4" controls controlslist="nodownload"></video>
+            </div>
+        </div>
+    </section>
     <?php include('./src/vista/footer.php') ?>
     <script src="./src/js/main.js"> </script>
 </body>

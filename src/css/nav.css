@@ -11,6 +11,7 @@ body {
 
 .navbar-fdc {
   transition: all 0.2s ease;
+  z-index: 890;
   position: fixed;
   backdrop-filter: blur(10px);
   width: 100vw;
@@ -20,6 +21,7 @@ body {
   @media screen and (min-width: 800px) {
     .navbar-fdc {
       align-items: center;
+      z-index: 890;
       flex-flow: row nowrap;
       justify-content: space-between; } }
   .navbar-fdc .titulo-nav {
@@ -78,6 +80,7 @@ body {
 
 .model-bg {
   transition: all 0.4s ease-in;
+  z-index: 900;
   transform: translateX(-10000%);
   background-color: rgba(0, 0, 0, 0.674);
   position: fixed;
@@ -86,6 +89,7 @@ body {
   right: 0px;
   left: 0px; }
   .model-bg .model-nav {
+    z-index: 990;
     width: 100%;
     height: 100vh;
     background-color: #fcfeff;
