@@ -111,6 +111,7 @@
     </section>
     <?php include('./src/vista/footer.php') ?>
     <script src="./src/js/main.js"> </script>
+    <script src="./src/js/terminos.js"> </script>
 </body>
 
 </html>

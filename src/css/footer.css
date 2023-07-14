@@ -1,79 +1,155 @@
 .contenedor-foot {
   background-color: #272525;
-  color: white; }
+  color: white;
+}
+.contenedor-foot .contenido-foot {
+  display: flex;
+  gap: 30px;
+  flex-flow: column nowrap;
+  padding: 50px 10px 10px 10px;
+}
+@media screen and (min-width: 800px) {
   .contenedor-foot .contenido-foot {
-    display: flex;
-    gap: 30px;
-    flex-flow: column nowrap;
-    padding: 50px 10px 10px 10px; }
-    @media screen and (min-width: 800px) {
-      .contenedor-foot .contenido-foot {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        justify-content: center; } }
+    display: grid;
+    grid-template-columns: 34% 25% 30%;
+    justify-content: center;
+  }
+}
 
 .terminos .terminos-text {
   display: flex;
   gap: 20px;
-  flex-flow: column nowrap; }
-  .terminos .terminos-text h4 {
-    font-weight: 800; }
-  .terminos .terminos-text h6 {
-    font-size: 16px;
-    font-weight: 700; }
-  .terminos .terminos-text p {
-    color: #bd0505;
-    cursor: pointer; }
+  flex-flow: column nowrap;
+}
+.terminos .terminos-text h4 {
+  font-weight: 800;
+}
+.terminos .terminos-text h6 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.terminos .terminos-text p {
+  color: #bd0505;
+  cursor: pointer;
+}
 .terminos .entradas {
   margin-top: 20px;
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px; }
-  .terminos .entradas h6 {
-    font-size: 14px;
-    font-weight: 800; }
-  .terminos .entradas .contenido-entrada span {
-    font-size: 12px;
-    font-weight: 600;
-    opacity: 0.2; }
-  .terminos .entradas .contenido-entrada p {
-    font-weight: 800;
-    opacity: 0.6; }
+  gap: 20px;
+}
+.terminos .entradas h6 {
+  font-size: 14px;
+  font-weight: 800;
+}
+.terminos .entradas .contenido-entrada span {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.2;
+}
+.terminos .entradas .contenido-entrada p {
+  font-weight: 800;
+  opacity: 0.6;
+}
 
 .informacion h6 {
   font-size: 17px;
-  font-weight: 800; }
+  font-weight: 800;
+}
 .informacion .enlace a {
   text-decoration: none;
-  color: #bd0505; }
+  color: #bd0505;
+}
 
 .form-contacto form {
   display: flex;
   flex-flow: column nowrap;
-  gap: 10px; }
-  .form-contacto form label span {
-    color: #bd0505; }
+  gap: 10px;
+}
+.form-contacto form label span {
+  color: #bd0505;
+}
+.form-contacto form input {
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  padding-left: 10px;
+  outline: none;
+}
+@media screen and (min-width: 800px) {
   .form-contacto form input {
-    border: none;
-    border-radius: 10px;
-    height: 35px;
-    padding-left: 10px;
-    outline: none; }
-    @media screen and (min-width: 800px) {
-      .form-contacto form input {
-        height: 30px;
-        border-radius: 5px; } }
-  .form-contacto form select {
-    outline: none;
     height: 30px;
-    padding-left: 10px;
-    border-radius: 4px; }
-  .form-contacto form input[type="submit"] {
-    margin-top: 20px;
-    width: 200px;
-    height: 40px;
-    border-radius: 6px;
-    background-color: #bd0505;
-    color: white; }
+    border-radius: 5px;
+  }
+}
+.form-contacto form select {
+  outline: none;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+.form-contacto form input[type=submit] {
+  margin-top: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #bd0505;
+  color: white;
+}
+
+.bg-terminos {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-10000%);
+  background-color: rgba(0, 0, 0, 0.638);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-terminos .close-terminos {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: white;
+  width: 30px;
+  cursor: pointer;
+}
+.bg-terminos .card-terminos {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+.bg-terminos .card-terminos .texto-card-terminos {
+  width: 90%;
+  height: 90%;
+  text-align: justify;
+  padding: 10px;
+  overflow: hidden;
+}
+.bg-terminos .card-terminos .texto-card-terminos h3 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 23px;
+}
+.bg-terminos .card-terminos .texto-card-terminos .parrafos-terminos {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  text-align: justify;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.active-terminos {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0px);
+}
 
 /*# sourceMappingURL=footer.css.map */

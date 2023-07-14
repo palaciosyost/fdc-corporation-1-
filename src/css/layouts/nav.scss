@@ -1,28 +1,19 @@
-$color-footer: #272525;
-$color-enlaces: #bd0505;
-$color-primary: #3191c5;
+@import 'variables.scss';
+@import 'tamaños.scss';
 body {
   font-family: sans-serif;
   margin: 0px;
   overflow-x: hidden;
 }
-@mixin laptop {
-  @media screen and (min-width: 800px) {
-    @content;
-  }
-}
-@mixin compu {
-  @media screen and (min-width: 1000px) {
-    @content;
-  }
-}
 .nav-active {
   transition: all 0.2s ease;
   background-color: #fcfeff !important;
+
   .enlaces-nav {
     padding-bottom: 10px;
   }
 }
+
 .navbar-fdc {
   transition: all 0.2s ease;
   z-index: 890;
@@ -32,12 +23,14 @@ body {
   height: auto;
   display: flex;
   flex-flow: column nowrap;
+
   @include laptop() {
     align-items: center;
     z-index: 890;
     flex-flow: row nowrap;
     justify-content: space-between;
   }
+
   .titulo-nav {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -46,21 +39,26 @@ body {
     flex-flow: row;
     align-items: center;
     justify-content: center;
+
     @include compu() {
       margin-left: 20px;
     }
+
     button {
       margin-right: 10px;
       border: none;
       background-color: transparent;
+
       svg {
         width: 30px;
+
         &:hover {
           color: $color-enlaces;
         }
       }
     }
   }
+
   .enlaces-nav {
     display: flex;
     margin-right: auto;
@@ -68,20 +66,24 @@ body {
     justify-content: center;
     flex-flow: row wrap;
     gap: 10px;
+
     @include laptop() {
       margin: 0px;
       margin-right: 20px;
     }
+
     @include compu() {
       margin-right: 50px;
       gap: 30px;
     }
+
     a {
       color: black;
       text-decoration: none;
       font-weight: 600;
       display: flex;
       align-items: center;
+
       &:hover {
         transition: all 0.1s ease;
         background-color: $color-primary;
@@ -89,18 +91,21 @@ body {
         border-radius: 3px;
         padding: 5px 10px 5px 10px;
       }
+
       &:first-child {
         background-color: $color-primary;
         color: white;
         border-radius: 3px;
         padding: 5px 10px 5px 10px;
       }
+
       svg {
         margin-right: 5px;
       }
     }
   }
 }
+
 .model-bg {
   transition: all 0.4s ease-in;
   z-index: 900;
@@ -111,15 +116,18 @@ body {
   bottom: 0px;
   right: 0px;
   left: 0px;
+
   .model-nav {
     z-index: 990;
     width: 100%;
     height: 100vh;
     background-color: #fcfeff;
     position: fixed;
+
     @include laptop() {
       width: 300px;
     }
+
     .close {
       svg {
         width: 30px;
@@ -127,39 +135,48 @@ body {
         top: 10px;
         right: 10px;
         cursor: pointer;
+
         &:hover {
           color: $color-enlaces;
         }
       }
     }
+
     .descripcion {
       padding: 60px 30px;
+
       .item {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         gap: 10px;
+
         p {
           font-weight: 700;
           margin: 0px;
           font-size: 18px;
         }
+
         a {
           text-decoration: none;
           color: black;
+
           svg {
             width: 25px;
           }
+
           &:nth-child(2) {
             &:hover {
               color: blue;
             }
           }
+
           &:nth-child(3) {
             &:hover {
               color: red;
             }
           }
+
           &:nth-child(4) {
             &:hover {
               color: rgb(255, 132, 0);
@@ -167,22 +184,27 @@ body {
           }
         }
       }
+
       h6 {
         margin-top: 50px;
         font-weight: 700;
       }
+
       .contenido {
         margin-top: 40px;
         margin-bottom: 50px;
+
         .text {
           span {
             font-size: 12px;
             font-weight: 500;
             opacity: 0.63;
           }
+
           p {
             opacity: 0.63;
             font-size: 16px;
+
             &:hover {
               opacity: 1;
             }
@@ -192,6 +214,7 @@ body {
     }
   }
 }
+
 .active {
   transition: all 0.2s ease-in-out;
   transform: translateX(0px);
@@ -205,6 +228,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   &::before {
     content: "";
     width: 10px;
@@ -216,15 +240,18 @@ body {
     border-radius: 50%;
     animation: onda2 1600ms ease infinite;
   }
+
   @keyframes onda2 {
     to {
       width: 70px;
       height: 70px;
     }
+
     from {
       transform: scale(1.1);
     }
   }
+
   &::after {
     content: "";
     width: 10px;
@@ -236,19 +263,26 @@ body {
     border-radius: 50%;
     animation: onda1 1600ms ease infinite;
   }
+
   @keyframes onda1 {
     to {
       width: 85px;
       height: 85px;
     }
+
     from {
       transform: scale(1.1);
     }
   }
 
-  img {
-    width: 50px;
-    height: 50px;
+  a {
     z-index: 900;
+    text-decoration: none;
+    img {
+      width: 50px;
+      height: 50px;
+    }
   }
+
+
 }

@@ -1,0 +1,252 @@
+@import 'variables.scss';
+@import 'tamaños.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+
+    .cards-servicios {
+        width: 90%;
+        margin-top: 160px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .contenedor-cards {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            flex-flow: row wrap;
+
+            .cards-item {
+                width: 300px;
+                height: 200px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                overflow: hidden;
+
+                &:hover {
+                    transition: all .2s ease;
+                    box-shadow: 2px 3px 10px 3px rgba(0, 0, 0, 0.387);
+                    transform: translateY(-10px);
+
+                    .text-cards {
+                        transition: all .5s ease;
+                        transform: translateY(0px);
+
+                        .hidden {
+                            visibility: hidden;
+                        }
+
+                        a {
+                            display: block;
+                        }
+                    }
+
+                }
+
+                .text-cards {
+                    width: 100%;
+                    height: 100%;
+                    transform: translateY(-160px);
+                    background-color: $color-enlaces;
+                    padding: 20px;
+                    padding-bottom: 0px;
+
+                    h3 {
+                        margin: 0px;
+                        color: white;
+                        font-size: 18px;
+                    }
+
+                    p {
+                        color: white;
+                        margin: 0px;
+                        margin-top: 20px;
+                        font-size: 13px;
+                        text-align: justify;
+                    }
+
+                    a {
+                        display: none;
+                        color: white;
+                        font-size: 14px;
+                        padding-top: 10px;
+                    }
+
+                    .hidden {
+                        color: white;
+                        font-size: 15px;
+                        bottom: 10px;
+                        position: absolute;
+                        right: 15%;
+                    }
+                }
+            }
+
+            .card-airecompresivo {
+                background-image: url(../assets/img/ser-mantenimiento-airecompresivo.jpg);
+            }
+
+            .card-compresor {
+                background-image: url(../assets/img/ser-mantenimiento-compresor.jpg);
+            }
+
+            .card-elevador {
+                background-image: url(../assets/img/ser-mantenimiento-elevadores.jpg);
+            }
+
+            .card-hidrolavadora {
+                background-image: url(../assets/img/ser-mantenimiento-hidrolavadora.jpg);
+            }
+        }
+
+    }
+
+    .seccion-info {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 100vw;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .titulo-seccion-info {
+            text-align: center;
+            padding: 10px 0px;
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+        .contenido-info {
+            .img-info {
+                width: 100vw;
+                height: 150px;
+                background-image: url(../assets/img/img-servicios.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                overflow: hidden;
+
+                @include tablet {
+                    height: 300px;
+                    background-size: cover;
+                }
+
+                &:hover {
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.872)), url(../assets/img/img-servicios.jpg);
+
+                    p {
+                        transition: all .3s ease;
+                        transform: translateY(30px);
+
+                        @include tablet {
+                            transform: translateY(150px);
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                p {
+                    transition: all .3s ease;
+                    color: white;
+                    transform: translateY(450px);
+                    padding: 20px;
+                    font-size: 12px;
+                    text-align: center;
+                    font-family: cursive;
+
+                    @include tablet {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .caracteristicas-seccion {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 30px;
+
+            .carac-cards {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+                align-items: center;
+
+                lottie-player {
+                    width: 300px;
+                }
+
+                .text-carac {
+                    width: auto;
+                    padding-left: 15px;
+
+                    @include tablet {
+                        width: 500px;
+                    }
+                }
+            }
+
+            .seguridad {
+                lottie-player {
+                    width: 400px;
+                }
+            }
+
+            .profesional {
+                display: flex;
+                flex-flow: column-reverse wrap;
+
+
+                @include laptop {
+                    display: flex;
+                    flex-flow: row wrap !important;
+                }
+            }
+        }
+    }
+
+    .contenedor-intro-me {
+        margin-top: 100px;
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+// ESTILOS HTML= MANTENIMIENTO-ELEVADORE.PHP
+
+
+
+
+/* Anchura de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background-color: rgb(199, 202, 199);
+}
+
+/* Color del pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+}
+
+/* Cambio de color del pulgar al pasar el ratón por encima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: skyblue;
+}
